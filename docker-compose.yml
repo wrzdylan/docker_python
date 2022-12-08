@@ -1,0 +1,16 @@
+---
+version: '3.8'
+
+services:
+  python:
+    build: python
+    ports:
+      - 8080:80
+
+  db:
+    image: postgres:13.9
+    environment:
+      POSTGRES_PASSWORD: Qro5JjQ#sAE&q7hKyCgEG!@Se6&rbkRa#X$QCgKi
+      POSTGRES_DB: test
+    ports:
+      - 5432:5432

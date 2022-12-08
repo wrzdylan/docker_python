@@ -9,8 +9,10 @@ services:
 
   db:
     image: postgres:13.9
-    environment:
-      POSTGRES_PASSWORD: Qro5JjQ#sAE&q7hKyCgEG!@Se6&rbkRa#X$QCgKi
-      POSTGRES_DB: test
+    env_file:
+      - ./config/.env.db
+
+  adminer:
+    image: adminer
     ports:
-      - 5432:5432
+      - 9000:8080
